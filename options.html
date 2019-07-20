@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Website color coding settings</title>
+    <script type="text/javascript" src="shared.js"></script>
+    <script type="text/javascript" src="options.js"></script>
+    <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+<body>
+<div class="container">
+    <h1>Website color coding settings</h1>
+    <button id="close-options">Close</button>
+    <form id="settings-form">
+        <fieldset>
+            <h2>Behaviour</h2>
+            <div class="pad">
+                <div>
+                    <input type="checkbox" id="color-bar">
+                    <label for="color-bar">Show color bar(s)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="message">
+                    <label for="message">Show message</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="domain-change-warning">
+                    <label for="domain-change-warning">Warn if domain changes</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="halfleft">
+            <h2>Color bar positions</h2>
+            <div class="pad">
+                <div>
+                    <input type="checkbox" id="color-bar-top">
+                    <label for="color-bar-top">Show color bar at top</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="color-bar-bottom">
+                    <label for="color-bar-bottom">Show color bar at bottom</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="color-bar-left">
+                    <label for="color-bar-left">Show color bar at left</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="color-bar-right">
+                    <label for="color-bar-right">Show color bar at right</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="halfright">
+            <h2>Message position</h2>
+            <div class="pad">
+                <div>
+                    <input type="checkbox" id="message-top">
+                    <label for="message-top">Show message at top</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="message-bottom">
+                    <label for="message-bottom">Show message at bottom</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="message-left">
+                    <label for="message-left">Show message at left</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="message-right">
+                    <label for="message-right">Show message at right</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="message-rotated">
+                    <label for="message-rotated">Rotate message if on left or right side</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h2>Color settings</h2>
+            <div class="pad">
+                <div class="new-color-setting">
+                    <label for="new-color-setting">Create new color setting:</label>
+                    <input id="new-color-setting" placeholder="Color setting name">
+                    <button id="add-color-setting">Add new color setting</button>
+                </div>
+                <table class="color-settings">
+                    <thead>
+                    <tr>
+                        <!--<th class="col-index"></th>-->
+                        <th class="col-name">Name</th>
+                        <th class="col-color">Color</th>
+                        <th class="col-message">Message</th>
+                        <th class="col-sitematches">Site matching (comma separated regexps)</th>
+                        <th class="col-delete"></th>
+                        <th class="col-move"></th>
+                    </tr>
+                    </thead>
+                    <tbody id="color-settings"></tbody>
+                </table>
+            </div>
+        </fieldset>
+        <fieldset id="fieldset-sites">
+            <h2>Configured sites</h2>
+            <div class="pad">
+                <table class="sites">
+                    <thead>
+                    <tr>
+                        <th class="col-site">Site</th>
+                        <th class="col-environment">Environment</th>
+                        <th class="col-delete"></th>
+                    </tr>
+                    </thead>
+                    <tbody id="sites"></tbody>
+                </table>
+            </div>
+        </fieldset>
+        <fieldset class="config">
+            <h2>Configuration</h2>
+            <div class="pad">
+                <button id="show-raw-config">Show raw config</button>
+                <button id="hide-raw-config" style="display: none;">Hide raw config</button>
+                <button id="reset-config">Reset config</button>
+                <pre id="raw-config" style="display: none;"></pre>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

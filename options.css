@@ -1,0 +1,162 @@
+body {
+  font-family: Verdana;
+  font-size: 12px;
+  background: #EEEEEE;
+}
+
+.container {
+  position: relative;
+  width: 80em;
+  margin: 0 auto;
+}
+
+#close-options {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+label,
+input {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-size: 180%;
+}
+h2 {
+  font-size: 140%;
+  margin: 0;
+  padding: .3em .6em;
+}
+
+.halfleft,
+.halfright {
+  width: 48%;
+  height: 15em;
+}
+.halfleft {
+  float: left;
+}
+.halfright {
+  float: right;
+}
+
+fieldset {
+  padding: 0;
+  margin-bottom: 2em;
+  background: white;
+  box-shadow: #CCCCCC .2em .2em .5em;
+  border: 1px solid #888888;
+}
+fieldset div.pad {
+  padding: 1em;
+  padding-top: .1em;
+}
+fieldset div.pad div {
+  padding: .3em;
+}
+
+input {
+  border: 1px solid #BBBBBB;
+  padding: .3em;
+}
+input:hover,
+input:active,
+input:focus {
+  border: 1px solid #666666;
+  box-shadow: #DDDDDD .1em .1em .4em;
+}
+input[type="checkbox"] {
+  vertical-align: middle;
+  position: relative;
+  bottom: .1em;
+}
+
+button {
+  border-width: 1px;
+  border-color: #DDDDDD;
+  border-style: outset;
+  padding: .3em .6em;
+  background-image: linear-gradient(to bottom right, #EEEEEE, #DDDDDD);
+  min-width: 10em;
+}
+button:hover {
+  background-image: linear-gradient(to bottom right, #F5F5F5, #EAEAEA);
+  border-color: #EEEEEE;
+}
+
+div > input[type="checkbox"],
+div > label,
+button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  text-align: left;
+  padding: .3em;
+}
+td {
+  padding: .8em;
+}
+tbody tr:hover {
+  background: #F5F5F5;
+}
+
+.new-color-setting label {
+  display: inline-block;
+  margin-bottom: 1em;
+  font-weight: bold;
+  padding-right: 1.8em;
+}
+.new-color-setting input {
+  width: 15em;
+  margin-right: 1.4em;
+}
+
+.color-settings {
+  margin-top: 2em;
+}
+.color-settings .col-name {
+  min-width: 5em;
+  font-weight: bold;
+}
+.color-settings .col-color input {
+  width: 6em;
+  font-family: Courier, Monospaced;
+}
+.color-settings .col-message input {
+  width: 15em;
+}
+.color-settings .col-sitematches input {
+  width: 20em;
+}
+.color-settings button {
+  min-width: 6em;
+}
+
+.sites .col-delete {
+  text-align: right;
+}
+
+.config h2 {
+  margin-bottom: .6em;
+}
+
+#reset-config {
+  float: right;
+  background-image: linear-gradient(to bottom right, #FFDDDD, #FFCCCC);
+  border-color: #CC9999;
+}
+#reset-config:hover {
+  background-image: linear-gradient(to bottom right, #ff7979, #ff4b55);
+  border-color: #DD7777;
+}
