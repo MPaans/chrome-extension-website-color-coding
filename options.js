@@ -10,6 +10,10 @@ chrome.storage.sync.get('config', function(data) {
     initInputs();
 });
 
+window.addEventListener('focus', function () {
+    window.document.location.reload();
+});
+
 function initInputs() {
     document.getElementById('close-options').addEventListener('click', function (event) {
         window.close();
