@@ -221,11 +221,11 @@ function removeElements() {
     for (var position in config.colorBarPositions) {
         var colorBar = document.getElementById('site-color-coding-color-bar-' + position);
         if (colorBar !== null) {
-            colorBar.outerHTML = '';
+            colorBar.remove();
         }
     }
     var message = document.getElementById('site-color-coding-message');
     if (message !== null) {
-        message.outerHTML = '';
+        message.remove();
     }
 }

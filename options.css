@@ -160,3 +160,10 @@ tbody tr:hover {
   background-image: linear-gradient(to bottom right, #ff7979, #ff4b55);
   border-color: #DD7777;
 }
+
+#hide-raw-config {
+  display: none;
+}
+#raw-config {
+  display: none;
+}

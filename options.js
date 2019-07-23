@@ -205,8 +205,8 @@ function deleteColorSetting(event) {
 }
 
 function deleteSite() {
-    var environment = this.parentElement.parentElement.getElementsByClassName('col-environment').item(0).innerHTML;
-    var site = this.parentElement.parentElement.getElementsByClassName('col-site').item(0).innerHTML;
+    var environment = this.parentElement.parentElement.getElementsByClassName('col-environment').item(0).innerText;
+    var site = this.parentElement.parentElement.getElementsByClassName('col-site').item(0).innerText;
     var index = config.sites[environment].indexOf(site);
     config.sites[environment].splice(index, 1);
     chrome.storage.sync.set({config: config});
@@ -244,7 +244,7 @@ function configReset() {
 }
 
 function rawConfigUpdate () {
-    document.getElementById('raw-config').innerHTML =
+    document.getElementById('raw-config').innerText =
         JSON.stringify(config, null, 2);
 }
 
