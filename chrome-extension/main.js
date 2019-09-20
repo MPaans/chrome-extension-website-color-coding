@@ -37,6 +37,9 @@ function checkDomainChange(event) {
     if (typeof target.hostname === 'undefined') {
         return true;
     }
+    if (target.hostname === '') {
+        return true;
+    }
     if (target.hostname !== document.location.hostname) {
         if (confirm('You are leaving the site, are you sure?') !== true) {
             event.preventDefault();
